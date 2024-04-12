@@ -17,12 +17,11 @@ TP2 :
 link API : http://localhost:8000/get_weather
 link DockerHub : https://hub.docker.com/repository/docker/nassim933/tp2/general
 
-body JSON : 
-{
-    "latitude" : "your_latitude",
-    "longitude" : "your_longitude",
-    "api_key" : "your API KEY"
-}
+To run: 
+
+docker build -t weather .
+docker run -p 8081:8081 --env API_KEY="303cc60b4908b33b88f1dfa22fc51ed9" weather
+
 
 Rapport: 
 
