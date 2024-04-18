@@ -49,7 +49,7 @@ jobs:
       with:
         resource-group: ADDA84-CTP
         dns-name-label: devops-20200510
-        image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/20200510:v1
+        image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/20200510:v2
         name: 20200510
         location: 'germanywestcentral'
         registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
