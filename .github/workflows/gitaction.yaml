@@ -33,26 +33,27 @@ jobs:
         OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
 
   deploy:
-    needs: build-and-push
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+  needs: build-and-push
+  runs-on: ubuntu-latest
+  steps:
+  - name: Checkout code
+    uses: actions/checkout@v2
 
-    - name: Login via Azure CLI
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+  - name: Login via Azure CLI
+    uses: azure/login@v1
+    with:
+      creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    - name: Deploy to Azure Container Instance
-      uses: azure/aci-deploy@v1
-      with:
-        resource-group: ADDA84-CTP
-        dns-name-label: devops-20200511
-        image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/20200511:v1
-        name: 20200511
-        location: 'francecentral'
-        registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
-        registry-username: ${{ secrets.REGISTRY_USERNAME }}
-        registry-password: ${{ secrets.REGISTRY_PASSWORD }}
-        secure-environment-variables: OPENWEATHER_API_KEY=${{ secrets.OPENWEATHER_API_KEY }}
+  - name: Deploy to Azure Container Instance
+    uses: azure/aci-deploy@v1
+    with:
+      resource-group: ADDA84-CTP
+      dns-name-label: devops-20200510
+      image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/20200510:v1
+      name: 20200510
+      location: 'francecentral'
+      registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
+      registry-username: ${{ secrets.REGISTRY_USERNAME }}
+      registry-password: ${{ secrets.REGISTRY_PASSWORD }}
+      secure-environment-variables: openweather_api_key=${{ secrets.OPENWEATHER_API_KEY }}
+
