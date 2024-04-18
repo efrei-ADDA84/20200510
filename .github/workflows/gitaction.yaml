@@ -23,9 +23,9 @@ jobs:
 
     - name: Build and push Docker image to ACR
       run: |
-        docker buildx build --platform linux/amd64 -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/$GITHUB_REPOSITORY:latest .
+        docker buildx build --platform linux/amd64 -t efreidevops.azurecr.io/efrei-ADDA84/20200510:latest .
         docker login ${{ secrets.REGISTRY_LOGIN_SERVER }} -u ${{ secrets.REGISTRY_USERNAME }} -p ${{ secrets.REGISTRY_PASSWORD }}
-        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/$GITHUB_REPOSITORY:latest
+        docker push efreidevops.azurecr.io/efrei-ADDA84/20200510:latest
 
     - name: Deploy to Azure Container Instance
       uses: azure/aci-deploy@v1
