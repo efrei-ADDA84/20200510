@@ -48,9 +48,9 @@ jobs:
       uses: azure/aci-deploy@v1
       with:
         resource-group: ADDA84-CTP
-        dns-name-label: devops-20200510
-        image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/20200510:v1
-        name: 20200510
+        dns-name-label: devops-20200511
+        image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/20200511:v1
+        name: 20200511
         location: 'francecentral'
         registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
         registry-username: ${{ secrets.REGISTRY_USERNAME }}
