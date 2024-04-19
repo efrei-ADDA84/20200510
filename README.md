@@ -26,3 +26,8 @@ docker run -p 8081:8081 --env API_KEY="303cc60b4908b33b88f1dfa22fc51ed9" weather
 Rapport: 
 
 J'ai continué avec python en utilisant la bibliothèque sanic pour l'API. J'ai utilisé cette lib car c'est ce que j'utilise au travail et je trouve qu'elle est trèc complète. J'ai eu des difficultés au niveau de la configuration du github action car je ne comprenais pas les "secrets". Mais j'ai finalement réussi à build et push l'image sur docker hub. 
+
+
+TP3 : 
+
+J'ai pas rencontrer de difficulté particulière pour ce TP. Je trouve que GitHub Action est très pratique pour gagner du temps en automatisant les processus. 
