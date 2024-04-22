@@ -31,3 +31,14 @@ J'ai continué avec python en utilisant la bibliothèque sanic pour l'API. J'ai 
 TP3 : 
 
 J'ai pas rencontrer de difficulté particulière pour ce TP. Je trouve que GitHub Action est très pratique pour gagner du temps en automatisant les processus. 
+
+TP4 : 
+
+Pour créer la machine virtuelle : 
+
+Run "az login" et créer la clé SSH avec "ssh-keygen -t rsa -b 4096 -C "mail-azure"".
+Run "terraform init"
+Run "terraform import azurerm_subnet.internal /subscriptions/765266c6-9a23-4638-af32-dd1e32613047/resourceGroups/ADDA84-CTP/providers/Microsoft.Network/virtualNetworks/network-tp4/subnets/internal"
+Run "terraform apply". Une fois terminé, run "terraform destroy". 
+
+J'ai pas rencontré de difficultés. 
